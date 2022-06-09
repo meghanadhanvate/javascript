@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript classes</title>
+</head>
+<body>
+    <h2>javascript html classes</h2>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p id="demo"></p>
+</body>
+<script>
+    class car {
+        constructor(brand) {
+            this.carname = brand;
+        }
+        get  cnam() {
+            return this.carname;
+        }
+        set cnam(x) {
+            return this.carname = x;
+        }
+    }
+    let obj = new car("Ford");
+    document.getElementById("demo").innerHTML = obj.cnam;
+</script>
+</html>
