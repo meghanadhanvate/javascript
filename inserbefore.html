@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Node</title>
+</head>
+<body>
+    <h2>Javscrip DOM</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, repudiandae soluta? Vitae nostrum quasi quisquam recusandae assumenda quis voluptates voluptatem ullam vero. Voluptatem sit nesciunt officiis animi nisi explicabo voluptas.</p>
+    <div id="div1">
+        <p id="p1">this is the paragraph</p>
+        <p>this is another paragraph</p>
+    </div>
+</body>
+<script>
+    const para = document.createElement("p");
+    const node = document.createTextNode("This is new paragraph.")
+    para.appendChild(node);
+    const element = document.getElementById("div1");
+    const child = document.getElementById("p1");
+    element.insertBefore(para, child);
+</script>
+</html>
