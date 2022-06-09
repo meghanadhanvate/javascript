@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>childnode</title>
+</head>
+<body>
+    <h2 id="p1">My fisrt page</h2>
+    <p id="p2"></p>
+</body>
+<script>
+    document.getElementById("p2").innerHTML = document.getElementById("p1").childNodes[0].nodeValue;
+</script>
+</html>

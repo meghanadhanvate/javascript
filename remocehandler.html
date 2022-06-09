@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removehandler</title>
+</head>
+<style>
+    #div1 {
+  background-color: coral;
+  border: 1px solid;
+  padding: 50px;
+  color: white;
+  font-size: 20px;
+}
+</style>
+<body>
+    <div id="div1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo vel veniam deserunt ipsum, hic praesentium minus, aliquid, sapiente animi ea cumque dolorum illum. Ipsam veritatis corporis repudiandae rem consequuntur cupiditate.</p>
+        <p>click on the button to see magic</p>
+        <button onclick="removehand()">Remove</button>
+    </div>
+        <p id="demo"></p>
+</body>
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = Math.random();
+    }
+    document.getElementById("div1").addEventListener("mousemove", myFunction);
+    function removehand() {
+        document.getElementById("div1").removeEventListener("mousemove", myFunction);
+    }
+</script>
+</html>
