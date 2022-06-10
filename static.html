@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Classes</title>
+    <title>Promise object</title>
 </head>
 <body>
-    <h2>javacsript classes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <h2>Javscript promise</h2>
     <p id="demo"></p>
 </body>
 <script>
-    class car {
-        constructor(name) {
-            this.name = name;
-        }
-        static hello(x) {
-            return "Hello!"  + x.name;
-        }
+    function para(some) {
+        document.getElementById("demo").innerHTML = some;
     }
-    let obj = new car("ford");
-    document.getElementById("demo").innerHTML = car.hello(obj);
+    let myPromise = new Promise(function(myResolve, myReject) {
+        let x = 0;
+        if(x == 0){
+            myResolve("OK");
+        }else {
+            myReject("Error");
+        }
+    });
+    myPromise.then(function(value) {para(value);},
+    function(error) {para(error);}
+    );
 </script>
 </html>
