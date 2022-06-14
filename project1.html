@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background flipper</title>
+</head>
+<style>
+    #text {
+        margin-left: 600px;
+        margin-top: 300px;
+        width: 280px;
+        background-color: black;
+        color: white;
+        height: 30px;
+       font-size: 20px;
+        padding: 30px;
+    }
+    #btn {
+        margin-left: 650px;
+        border-color: rgb(40, 36, 45);
+        border-radius: 10px;
+        width: 200px;
+        cursor: pointer;
+        height: 50px;
+    }
+</style>
+<body id="top">
+    <p id="text">Background color: <span id="color"></span></p>
+    <button id="btn" onclick="flipper()">Random color!</button>
+</body>
+<script src="project.js"></script>
+</html>
