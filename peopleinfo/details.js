@@ -1,4 +1,4 @@
-let peoples = [
+let contacts = [
     {
         "gender": "male",
         "name": {
@@ -1233,16 +1233,19 @@ let peoples = [
     }
 ];
 
-function show_details() {
+function display_contact() {
     let rows = ""
-    peoples.map((people) => {
+    contacts.map((contact) => {
+        /* uid=object.keys(contact.login.uuid)
+         str=uid.slice(uid.length-4)*/
         rows = rows + `<tr>
-                            <td>${people.id.value.slice(-4)}</td>
-                            <td>${people.name.first}</td>
-                            <td>${people.email}</td>
-                            <td><img src = "${people.picture.large}"></td>
-                            <td>${people.dob.age}</td>
-                       </tr>`
+                        <td>${contact.login.uuid.slice(-4)}</td>
+                        <td>${(contact.name.title + ' ' + contact.name.first + ' ' + contact.name.last).toLocaleUpperCase()}</td>
+                        <td>${contact.email}</td>
+                        <td><img src='${contact.picture.large}'/></td>
+                        <td>${contact.registered.age}</td>
+                        
+                        </tr>`
     })
-    document.getElementById('meghana').innerHTML = rows
+    document.getElementById('amar').innerHTML = rows
 }
